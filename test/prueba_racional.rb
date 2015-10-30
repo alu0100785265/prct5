@@ -2,7 +2,7 @@
 require './lib/racional.rb'
 require 'test/unit' 
 
-class Test_Fraccion < Test::Unit::TestCase
+class TestFraccion < Test::Unit::TestCase
   
   
   def setup
@@ -16,18 +16,18 @@ class Test_Fraccion < Test::Unit::TestCase
    
         #suma
        
-       assert_equal("3/2",(@a.suma(@b)).to_s,)
+       assert_equal("3/2",(@a.+(@b)).to_s,)
        
        #resta
        
-       assert_equal(Fraccion.new(-1,2).to_s,(@a.resta(@b)).to_s)
+       assert_equal(Fraccion.new(-1,2).to_s,(@a.-(@b)).to_s)
        
        #division
-       assert_equal(Fraccion.new(1,2).to_s,(@a.division(@b)).to_s)
+       assert_equal(Fraccion.new(1,2).to_s,(@a./(@b)).to_s)
        
        #multi
-       assert_equal(Fraccion.new(1,2).to_s,(@a.producto(@b)).to_s)
-       assert_equal(Fraccion.new(1,4).to_s,(@c.producto(@d)).to_s)
+       assert_equal(Fraccion.new(1,2).to_s,(@a.*(@b)).to_s)
+       assert_equal(Fraccion.new(1,4).to_s,(@c.*(@d)).to_s)
     
 
   end

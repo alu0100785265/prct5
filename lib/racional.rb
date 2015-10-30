@@ -28,7 +28,7 @@ class Fraccion
   end
   
   #Suma de fracciones
-  def suma(fraccion)
+  def +(fraccion)
     
       
       mcm = (@denominador * fraccion.denominador)/gcd(@denominador, fraccion.denominador)
@@ -39,7 +39,7 @@ class Fraccion
   end
   
   #Resta de fracciones
-  def resta(fraccion)
+  def -(fraccion)
       mcm = (@denominador * fraccion.denominador)/gcd(@denominador, fraccion.denominador)
       fracc1 = Fraccion.new((mcm/@denominador) * @numerador, mcm)
       fracc2 = Fraccion.new((mcm/fraccion.denominador) * fraccion.numerador, mcm)
@@ -47,12 +47,12 @@ class Fraccion
   end
 
    #Producto de fracciones
-   def producto(fraccion)
+   def *(fraccion)
       simplificar(Fraccion.new(@numerador * fraccion.numerador, @denominador * fraccion.denominador))
    end
 
    #División de fracciones
-   def division(fraccion)
+   def /(fraccion)
       simplificar(Fraccion.new(@numerador * fraccion.denominador, @denominador * fraccion.numerador))
    end
 end
