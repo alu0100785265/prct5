@@ -1,5 +1,5 @@
  
-require '../lib/racional.rb'
+require './lib/racional.rb'
 require 'test/unit' 
 
 class Test_Fraccion < Test::Unit::TestCase
