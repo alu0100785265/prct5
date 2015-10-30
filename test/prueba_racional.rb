@@ -18,7 +18,15 @@ class Test_Fraccion < Test::Unit::TestCase
        
        assert_equal("3/2",(@a.suma(@b)).to_s,)
        
+       #resta
        
+       assert_equal(Fraccion.new(-1,2).to_s,(@a.resta(@b)).to_s)
+       
+       #division
+       assert_equal(Fraccion.new(1,2).to_s,(@a.division(@b)).to_s)
+       
+       #multi
+       assert_equal(Fraccion.new(1,2).to_s,(@a.producto(@b)).to_s)
        
     
 
