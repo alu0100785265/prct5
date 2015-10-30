@@ -27,7 +27,7 @@ class Test_Fraccion < Test::Unit::TestCase
        
        #multi
        assert_equal(Fraccion.new(1,2).to_s,(@a.producto(@b)).to_s)
-       
+       assert_equal(Fraccion.new(1,4).to_s,(@c.producto(@d)).to_s)
     
 
   end
